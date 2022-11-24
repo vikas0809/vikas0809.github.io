@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" style= "background-color: antiquewhite;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
         <link rel="stylesheet" href="static/css/style.css"> 
-  
         <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
           <a class="navbar-brand" href="#">BellyButton Diversity</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,23 +35,20 @@
           </div>
         </nav>
 </head>
-
 <body>
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 jumbotron text-center ">
-        <h1 >Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset<p>
+        <h1 style= "color:white">Belly Button Biodiversity Dashboard</h1>
+        <p style= "color:grey">Use the interactive charts below to explore the dataset<p>
       </div>
     </div>
   </div>
-
     <div class="container-fluid">
       <div class="row ">
-        <div class="col-md-12 bg-dark " id="aboutthis">
-          <h2 class="text-center">About this Dashboard</h2>
-          <p>Roza has a partially completed dashboard that she needs to finish.
+        <div class="col-md-12" id="aboutthis">
+          <h2 class="text-center" style= "color:black">About this Dashboard</h2>
+          <p style= "color:black">Roza has a partially completed dashboard that she needs to finish.
              She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer.
               Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way,
                if Improbable Beef identifies a species as a candidate to manufacture synthetic beef,
@@ -61,50 +56,38 @@
         </div>
       </div>
     </div>
-
-  <div class="container-fluid bg-dark">
+  <div class="container-fluid">
     <div class="row text-centre">
-      <div class="col-md-6 " id="selectid">
-          <h6 class="text-centre">Test Subject ID:</h6>
-          <select class="row " id="selDataset" onchange="optionChanged(this.value)"></select>
+      <div class="col-md-4 ">
+        <div id="bar" ></div>
+    </div>
+      <div class="col-md-1 " id="selectid">
+          <h6 class="text-centre" style= "color:black">Test Subject ID:</h6>
+          <select class="row " id="selDataset" style= "color:black" onchange="optionChanged(this.value)"></select>
         </div>
-      </div>
-
-      <div class="col-md-6">
+      <div class="col-md-3">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h4 class="panel-title text-center">Demographic Info</h4>
+            <h4 class="panel-title text-center" style= "color:black" >Demographic Info</h4>
           </div>
-          <div id="sample-metadata" class="panel-body text-center " id="demoinfo"></div>
+          <div id="sample-metadata" class="panel-body text-center " id="demoinfo" style= "color:black"></div>
         </div>
       </div>
+      <div class="col-md-4">
+        <div id="gauge" ></div>
     </div>
-    
-
-    <div class="container">
-      <div class = "row">
-        <div class="col-md-6 ">
-          <div id="bar" ></div>
-      </div>
-        <div class="col-md-6">
-          <div id="gauge" ></div>
-      </div>
-      </div>
     </div>
-
-    <div class="container">
+  </div>
+    <div class="container-fluid">
       <div class = "row">
         <div class="col-md-12">
           <div id="bubble"></div>
         </div>
     </div>
   </div>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="static/js/plots.js"></script>
-
 </body>
 
 </html>
