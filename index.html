@@ -10,6 +10,32 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
         <link rel="stylesheet" href="static/css/style.css"> 
+  
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+          <a class="navbar-brand" href="#">BellyButton Diversity</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#aboutthis">About This <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#selectid">Subject ID</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bar">Top 10 bacteria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#gauge">Wash Frequency</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#bubble">Bacteria-Culture BubbleChart</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 </head>
 
 <body>
@@ -18,15 +44,15 @@
     <div class="row">
       <div class="col-md-12 jumbotron text-center ">
         <h1 >Belly Button Biodiversity Dashboard</h1>
-        <p >Use the interactive charts below to explore the dataset</p>
+        <p>Use the interactive charts below to explore the dataset<p>
       </div>
     </div>
   </div>
 
     <div class="container-fluid">
       <div class="row ">
-        <div class="col-md-12 bg-light ">
-          <h2>About this Dashboard</h2>
+        <div class="col-md-12 bg-dark " id="aboutthis">
+          <h2 class="text-center">About this Dashboard</h2>
           <p>Roza has a partially completed dashboard that she needs to finish.
              She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer.
               Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way,
@@ -36,11 +62,11 @@
       </div>
     </div>
 
-  <div class="container-fluid">
-    <div class="row ">
-      <div class="col-md-6 ">
-          <h6>Test Subject ID:</h6>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+  <div class="container-fluid bg-dark">
+    <div class="row text-centre">
+      <div class="col-md-6 " id="selectid">
+          <h6 class="text-centre">Test Subject ID:</h6>
+          <select class="row " id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
       </div>
 
@@ -49,7 +75,7 @@
           <div class="panel-heading">
             <h4 class="panel-title text-center">Demographic Info</h4>
           </div>
-          <div id="sample-metadata" class="panel-body text-center "></div>
+          <div id="sample-metadata" class="panel-body text-center " id="demoinfo"></div>
         </div>
       </div>
     </div>
