@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="static/css/style.css"> 
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center ">
+        <h1 >Belly Button Biodiversity Dashboard</h1>
+        <p >Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="container-fluid">
+      <div class="row ">
+        <div class="col-md-12 bg-light ">
+          <h2>About this Dashboard</h2>
+          <p>Roza has a partially completed dashboard that she needs to finish.
+             She has a completed panel for demographic information and now needs to visualize the bacterial data for each volunteer.
+              Specifically, her volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way,
+               if Improbable Beef identifies a species as a candidate to manufacture synthetic beef,
+                Roza's volunteers will be able to identify whether that species is found in their navel.<br><br></p>
+        </div>
+      </div>
+    </div>
+
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-md-6 ">
+          <h6>Test Subject ID:</h6>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h4 class="panel-title text-center">Demographic Info</h4>
+          </div>
+          <div id="sample-metadata" class="panel-body text-center "></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="container">
+      <div class = "row">
+        <div class="col-md-6 ">
+          <div id="bar" ></div>
+      </div>
+        <div class="col-md-6">
+          <div id="gauge" ></div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class = "row">
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/plots.js"></script>
+
+</body>
+
+</html>
